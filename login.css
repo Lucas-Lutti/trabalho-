@@ -293,8 +293,7 @@
   .cont_forms_active_login {
   z-index: 2;  
   }
-  .cont_forms_active_login  >.cont_form_login {
-  }
+  
   
   .cont_form_sign_up {
     position: absolute;
