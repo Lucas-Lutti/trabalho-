@@ -253,16 +253,17 @@ form{
 	text-transform: uppercase;
 }
 
-
 .category-child{
     justify-content: center;
     
     padding: 0 15vw;
     margin: 0;
 }
+
 .category-child .post-content span {
     color: #fff;
 }
+
 .category-child .post-content {
     background-color: rgba(0, 0, 0, 0.308);
     color: #fff;
@@ -274,6 +275,7 @@ form{
     height: 20px;
     overflow: hidden;
 }
+
 .thumb img {
     width: 70px;
     
@@ -284,6 +286,94 @@ form{
     position: relative;
     top: -10px;
 }
+
 h2.categorias{
     text-align: center;
 }
+
+.parte3{
+	background-color: rgba(0, 0, 0, 0.90);
+	height: 300vh;
+}
+
+.parte3 .row{
+	justify-content: center;
+}
+
+.title{
+	text-align: center;
+}
+
+.abas{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+	text-align: center;
+}
+
+.primeiro{
+	padding: 5px;
+	outline-width: 3px;
+	border-radius: 15px;
+	background-color: white;
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: block;
+	align-items: left;
+}
+
+.primeiro input{
+	height: 30px;
+	border: none;
+	line-height: 18px;
+	cursor: pointer;
+	border-radius: 30px;
+	background-color: green;
+	color: black;
+}
+
+.segundo{
+	padding: 5px;
+	outline-width: 3px;
+	border-radius: 15px;
+	background-color: white;
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: block;
+	align-items: left;
+}
+
+.segundo input{
+	height: 30px;
+	border: none;
+	line-height: 18px;
+	cursor: pointer;
+	border-radius: 30px;
+	background-color: green;
+	color: black;
+}
+
+.terceiro{
+	padding: 5px;
+	outline-width: 3px;
+	border-radius: 15px;
+	background-color: white;
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: block;
+	align-items: left;
+}
+
+.terceiro input{
+	height: 30px;
+	border: none;
+	line-height: 18px;
+	cursor: pointer;
+	border-radius: 30px;
+	background-color: green;
+	color: black;
+}
+
