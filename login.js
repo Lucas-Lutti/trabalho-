@@ -6,9 +6,9 @@ function login(){
 }
 
 function signup(){
-    var username = document.getElementById("signupusername");
-    var password = document.getElementById("signuppassword");
-    var comfirm = document.getElementById("signupcomfirm");
+    var username = document.getElementById("signupusername").value;
+    var password = document.getElementById("signuppassword").value;
+    var comfirm = document.getElementById("signupcomfirm").value;
 
     if(password==comfirm){
         console.log("Nome: "+username+"Senha: "+password);
