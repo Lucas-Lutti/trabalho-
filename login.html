@@ -1,129 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="login.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greez - Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="header.css">
+  <script src="login.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
 </head>
+
 <body>
-    
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <div class="header__logo">
+            <a href="./index.html"><img class="logo"
+                src="img/png-transparent-question-mark-emoji-sms-question-mark-angle-text-logo.png" alt=""></a>
+          </div>
+
+        </div>
+        <div class="col-lg-9 col-md-9">
+          <div class="header__nav">
+            <nav class="header__menu mobile-menu">
+              <ul>
+                <li class="active">
+                  <a href="./index.html" class="test">
+                    <div class="header-btn"><i class="fas fa-home"></i> Ínicio</div>
+                  </a>
+                </li>
 
 
-<div class="cotn_principal">
-<div class="cont_centrar">
 
-  <div class="cont_login">
-<div class="cont_info_log_sign_up">
-      <div class="col_md_login">
-<div class="cont_ba_opcitiy">
-        
-        <h2>LOGIN</h2>  
-  <p></p> 
-  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
-  </div>
-  </div>
-<div class="col_md_sign_up">
-<div class="cont_ba_opcitiy">
-  <h2>SIGN UP</h2>
 
-  
-  <p></p>
 
-  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
-</div>
-  </div>
-       </div>
 
-    
-    <div class="cont_back_info">
-       <div class="cont_img_back_grey">
-       <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png" alt="" />
-       </div>
-       
+                <li><a href="#" class="test">
+                    <div class="header-btn">Listing</div>
+                  </a></li>
+                <li><a href="#" class="test">
+                    <div class="header-btn">Categorias</div>
+                  </a></li>
+                <li><a href="#" class="test">
+                    <div class="header-btn">Páginas</div>
+                  </a>
+                  <ul class="dropdown">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Listing Details</a></li>
+                    <li><a href="#">Blog Details</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="login.html" class="test">
+                    <div class="header-btn">Login</div>
+                  </a>
+          </div>
+          </li>
+          </ul>
+          </nav>
+
+        </div>
+      </div>
     </div>
-<div class="cont_forms" >
-    <div class="cont_img_back_">
-       <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png" alt="" />
-       </div>
- <div class="cont_form_login">
-<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons"></i></a>
-   <h2>LOGIN</h2>
- <input type="text" placeholder="Username" />
-<input type="password" placeholder="Password" />
-<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
-  </div>
-  
-   <div class="cont_form_sign_up">
-<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
-     <h2>SIGN UP</h2>
-<input type="text" placeholder="Username" />
-<input type="password" placeholder="Password" />
-<input type="password" placeholder="Confirm Password" />
-<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
-
-  </div>
 
     </div>
-    
+  </header>
+
+
+
+  <div class="cotn_principal">
+    <div class="cont_centrar">
+
+      <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+          <div class="col_md_login">
+            <div class="cont_ba_opcitiy">
+
+              <h2>LOGIN</h2>
+              <p></p>
+              <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+            </div>
+          </div>
+          <div class="col_md_sign_up">
+            <div class="cont_ba_opcitiy">
+              <h2>SIGN UP</h2>
+
+
+              <p></p>
+
+              <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cont_back_info">
+          <div class="cont_img_back_grey">
+            <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png"
+              alt="" />
+          </div>
+
+        </div>
+        <div class="cont_forms">
+          <div class="cont_img_back_">
+            <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png"
+              alt="" />
+          </div>
+          <div class="cont_form_login">
+            <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
+            <h2>LOGIN</h2>
+            <input id="loginusername" type="text" placeholder="Username" />
+            <input id="loginpassword" type="password" placeholder="Password" />
+            <button class="btn_login" onclick="login()" onclick="cambiar_login()">LOGIN</button>
+          </div>
+
+          <div class="cont_form_sign_up">
+            <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
+            <h2>SIGN UP</h2>
+            <input id="signupusername" type="text" placeholder="Username" />
+            <input id="signuppassword" type="password" placeholder="Password" />
+            <input id="signupcomfirm" type="password" placeholder="Confirm Password" />
+            <button class="btn_sign_up" onclick="signup()" onclick="cambiar_sign_up()">SIGN UP</button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   </div>
- </div>
-</div>
-<script>
+  <script>
     /* ------------------------------------ Click on login and Sign Up to  changue and view the effect
 ---------------------------------------
 */
 
-function cambiar_login() {
-  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
-document.querySelector('.cont_form_login').style.display = "block";
-document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+    function cambiar_login() {
+      document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";
+      document.querySelector('.cont_form_login').style.display = "block";
+      document.querySelector('.cont_form_sign_up').style.opacity = "0";
 
-setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },400);  
-  
-setTimeout(function(){    
-document.querySelector('.cont_form_sign_up').style.display = "none";
-},200);  
-  }
+      setTimeout(function () { document.querySelector('.cont_form_login').style.opacity = "1"; }, 400);
 
-function cambiar_sign_up(at) {
-  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
-  document.querySelector('.cont_form_sign_up').style.display = "block";
-document.querySelector('.cont_form_login').style.opacity = "0";
-  
-setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
-},100);  
+      setTimeout(function () {
+        document.querySelector('.cont_form_sign_up').style.display = "none";
+      }, 200);
+    }
 
-setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
-},400);  
+    function cambiar_sign_up(at) {
+      document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
+      document.querySelector('.cont_form_sign_up').style.display = "block";
+      document.querySelector('.cont_form_login').style.opacity = "0";
 
+      setTimeout(function () {
+        document.querySelector('.cont_form_sign_up').style.opacity = "1";
+      }, 100);
 
-}    
-
+      setTimeout(function () {
+        document.querySelector('.cont_form_login').style.display = "none";
+      }, 400);
 
 
-function ocultar_login_sign_up() {
-
-document.querySelector('.cont_forms').className = "cont_forms";  
-document.querySelector('.cont_form_sign_up').style.opacity = "0";               
-document.querySelector('.cont_form_login').style.opacity = "0"; 
-
-setTimeout(function(){
-document.querySelector('.cont_form_sign_up').style.display = "none";
-document.querySelector('.cont_form_login').style.display = "none";
-},500);  
-  
-  }
+    }
 
 
 
+    function ocultar_login_sign_up() {
 
-</script>
+      document.querySelector('.cont_forms').className = "cont_forms";
+      document.querySelector('.cont_form_sign_up').style.opacity = "0";
+      document.querySelector('.cont_form_login').style.opacity = "0";
+
+      setTimeout(function () {
+        document.querySelector('.cont_form_sign_up').style.display = "none";
+        document.querySelector('.cont_form_login').style.display = "none";
+      }, 500);
+
+    }
+
+
+
+
+  </script>
+
+
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </body>
+
 </html>
