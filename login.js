@@ -12,6 +12,9 @@ function signup(){
 
     if(password==comfirm){
         console.log("Nome: "+username+"Senha: "+password);
+        localStorage.setItem('nome', signupusername.value);
+        localStorage.setItem('senha', signuppassword.value);
+
     }
     else{
         console.log("As senhas tem de ser iguais");
