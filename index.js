@@ -55,3 +55,14 @@ function logout() {
 function redirecionar(){
     window.location.replace("index.html");
 }
+
+function exibircat(){
+    var verifica = document.getElementById('mb').classList.contains('hide');
+    if(verifica == false){
+        document.getElementById('mb').classList.add("hide");
+    }
+    if(verifica == true){
+        document.getElementById('mb').classList.remove("hide");
+    }
+    
+}
