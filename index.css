@@ -1,4 +1,6 @@
-
+body{
+	overflow-x: hidden;
+}
 .parte2{
     background-color: #A4A4A4;
     height: 70vh;
@@ -7,9 +9,7 @@
     text-align: center;
     color: white;
 }
-form{
-    padding-left: 30%;
-}
+
 .hero__search__form {
 	margin-bottom: 30px;
 	padding: 20px;
@@ -18,7 +18,7 @@ form{
 }
 
 .hero__search__form form input {
-	width: 40%;
+	width: 80%;
 	float: left;
 	font-size: 15px;
 	color: #A8A8A8;
@@ -96,7 +96,7 @@ form{
 }
 
 .hero__search__form form button {
-	width: 15%;
+	width: 20%;
 	height: 54px;
 	border: none;
 	font-size: 14px;

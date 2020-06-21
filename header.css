@@ -1,6 +1,5 @@
 
-.header {
-	
+.header {	
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -185,12 +184,15 @@
 }
 
 .login_area{
-	align-items: ;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	justify-content: right;
 }
 
 .login_area ul li{
+	display: block;
 	list-style: none;
-	float: right;
+	margin: auto;
 }
 
 .login_area ul li:hover .dropdown {
