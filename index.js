@@ -55,9 +55,3 @@ function logout() {
 function redirecionar(){
     window.location.replace("index.html");
 }
-
-function pesquisa(){
-    let p = getElementById("impPesquisa");
-    for(p in)
-
-}

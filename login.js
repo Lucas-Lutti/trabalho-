@@ -21,7 +21,7 @@ function signup(){
     }
     else{
         console.log("As senhas tem de ser iguais");
-        alert("as senhas não se correspondem");
+        alert("As senhas não se correspondem");
     }
 }
 
