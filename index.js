@@ -9,6 +9,7 @@ function testeLogin() {
         var a = document.createElement('a');
         a.classList.add('test');
         pai.appendChild(a);
+        a.href = "#";
         var div = document.createElement('div');
         div.classList.add('header-btn');
         div.innerHTML = sessionStorage.nome;
@@ -53,4 +54,10 @@ function logout() {
 
 function redirecionar(){
     window.location.replace("index.html");
+}
+
+function pesquisa(){
+    let p = getElementById("impPesquisa");
+    for(p in)
+
 }
