@@ -26,13 +26,13 @@
     <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="col-lg-1 col-md-1 col-sm-12">
                     <div class="header__logo">
                         <a href="./index.html"><img class="logo" src="img/logo.png" alt=""></a>
                     </div>
 
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-10 col-md-10 col-sm-12">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
@@ -41,12 +41,6 @@
                                         <div class="header-btn"><i class="fas fa-home"></i> Ínicio</div>
                                     </a>
                                 </li>
-
-
-
-
-
-
                                 <li><a href="#" class="test">
                                         <div class="header-btn">Categorias</div>
                                     </a></li>
@@ -57,7 +51,7 @@
                                         <div class="header-btn">Páginas</div>
                                     </a>
                                     <ul class="dropdown">
-                                        <li><a href="#">About</li>
+                                        <li><a href="#">About</a></li>
                                         <li><a href="#">Listing Details</a></li>
                                         <li><a href="#">Blog Details</a></li>
                                         <li><a href="#">Contact</a></li>
@@ -69,14 +63,16 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                    <ul>
-                        <li id="Novonome">
-                            <a href="login.html" class="test" id="apagar">
-                                <div class="header-btn" id="TrocaLogin">Login</div>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-lg-1 col-md-1 col-sm-12">
+                    <div class="login_area">
+                        <ul>
+                            <li id="Novonome">
+                                <a href="login.html" class="test" id="apagar">
+                                    <div class="header-btn" id="TrocaLogin">Entrar/Registrar</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,128 +80,116 @@
         </div>
     </header>
 
-    <section class="parte2">
+    <section class="pesquisa">
+        <div class="row">
+            <div class="col-12 titulo">
+                <h1>Descubra o melhor evento para você!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="hero__search__form">
+                    <form action="#">
+                        <input id="inpPesquisa" type="text" placeholder="Pesquisar...">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-chama">Descubra o melhor evento para você</h1>
-                    <div class="hero__search__form">
-                        <form action="#">
-                            <input type="text" placeholder="Pesquisar...">
-
-                            <button type="submit">Explore Now</button>
-                        </form>
-                    </div>
-                    <h2 class="sessao">Categorias</h2>
-                </div>
-
-                <div class="row category-child" style="margin-top:20px">
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/festas.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Festas</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/shows.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Shows</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/show.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Esportivos</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/karaokes.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Karaokês</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/show.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Família</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/show.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Diversos</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                        <button id="btnPesquisa" onclick="pesquisa()" type="submit">Explorar</button>
+                    </form>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section class="parte3">
-        <div class="container">
-            <div class="row">
-                <div class="title">
-                    <h1 class="abas">Destaques</h1>
+    <section class="categorias">
+        <div class="row">
+            <div class="col-12 titulo">
+                <h1>Categorias</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 row cat_area">
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/festas.png" alt="">
+                            <h5>Festa</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/shows.png" alt="">
+                            <h5>Show</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/karaokes.png" alt="">
+                            <h5>Karaokê</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/jogos.png" alt="">
+                            <h5>Jogos</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/educacao.png" alt="">
+                            <h5>Educação</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/ciencia.png" alt="">
+                            <h5>Ciência</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/tecnologia.png" alt="">
+                            <h5>Tecnologia</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/saude.png" alt="">
+                            <h5>Saúde</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/esportes.png" alt="">
+                            <h5>Esportes</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#">
+                        <div class="cat_card">
+                            <img src="img/financeiro.png" alt="">
+                            <h5>Financeiro</h5>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="primeiro">
-                        <h2 class="first">Flowers</h2>
-                        <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ullam corporis
-                            aut, repellendus vitae unde ut? Excepturi, ipsa quae. Adipisci dignissimos, inventore amet
-                            dolor deserunt neque vel? Impedit, consequuntur voluptatem!
-                        </p>
-                        <input type="button" value="Acessar!">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="segundo">
-                        <h2 class="second">Só track boa</h2>
-                        <p align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem nulla harum
-                            doloribus alias nesciunt necessitatibus illum explicabo, ab nam quibusdam blanditiis sint
-                            ratione ea aperiam quo quam distinctio architecto nostrum.
-                        </p>
-                        <input type="button" value="Acessar!">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="terceiro">
-                        <h2 class="third">Carnaval do Bem</h2>
-                        <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eius iure
-                            quisquam aliquid, ullam, amet iusto aperiam commodi illum maiores fuga perferendis corporis
-                            error deleniti doloremque eaque officiis consequuntur harum?
-                        </p>
-                        <input type="button" value="Acessar!">
-                    </div>
-                </div>
-            </div>
+            <div class="col-2"></div>
         </div>
     </section>
 

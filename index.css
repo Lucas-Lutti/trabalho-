@@ -12,7 +12,6 @@ form{
 }
 .hero__search__form {
 	margin-bottom: 30px;
-	background: rgba(255, 255, 255, 0.1);
 	padding: 20px;
     border-radius: 5px;
     
@@ -102,7 +101,7 @@ form{
 	border: none;
 	font-size: 14px;
 	font-weight: 700;
-	background: #f03250;
+	background: #3294f0;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -236,3 +235,61 @@ h2.sessao{
 	color: black;
 }
 
+.pesquisa{
+	background-color: rgb(44, 44, 44);
+}
+
+.titulo{
+	text-align: center;
+	margin-top: 30px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.categorias{
+	background-color: rgb(24, 24, 24);
+}
+.cat_area{
+	background-color: #2c2c2c;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	justify-content: center;
+}
+
+.cat_sep{
+	margin: 10px;
+}
+
+.cat_sep a{
+	color: white;
+	text-decoration: none;
+}
+
+.cat_sep a:hover{
+	color: rgb(182, 182, 182);
+	text-decoration: none;
+}
+
+.cat_card{
+	display: block;
+	margin: 0px;
+	background-color: #5a6f83;
+	max-width: 120px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.cat_card:hover{
+	background-color: #4b5d6e;
+}
+
+.cat_card img{
+	display: block;
+	max-width: 80px;
+	margin: auto;
+}
+
+.cat_card h5{
+	margin-top: 10px;
+	text-align: center;
+}
