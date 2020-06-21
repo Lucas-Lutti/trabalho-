@@ -21,30 +21,30 @@ body{
 	width: 80%;
 	float: left;
 	font-size: 15px;
-	color: #A8A8A8;
+	color: #616161;
 	padding-left: 30px;
 	height: 54px;
 	border: none;
 }
 
 .hero__search__form form input::-webkit-input-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input::-moz-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input:-ms-input-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input::-ms-input-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input::placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form .select__option {
