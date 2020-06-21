@@ -21,22 +21,36 @@ function testeLogin() {
         var a1 = document.createElement('a');
         li1.appendChild(a1);
         a1.innerHTML = ("Meu Perfil");
+        a1.href = "#";
         var li2 = document.createElement('li');
         ul.appendChild(li2);
         var a2 = document.createElement('a');
         li2.appendChild(a2);
         a2.innerHTML = ("Meu Calendario");
+        a2.href = "#";
         var li3 = document.createElement('li');
         ul.appendChild(li3);
         var a3 = document.createElement('a');
         li3.appendChild(a3);
         a3.innerHTML = ("Configurações");
+        a3.href = "#";
         var li4 = document.createElement('li');
         ul.appendChild(li4);
         var a4 = document.createElement('a');
         li4.appendChild(a4);
         a4.innerHTML = ("Logout");
-
+        a4.href = "#";
+        a4.setAttribute("onclick", "logout();");
         
     }
+}
+
+function logout() {
+    sessionStorage.clear();
+    redirecionar();
+
+}
+
+function redirecionar(){
+    window.location.replace("index.html");
 }
