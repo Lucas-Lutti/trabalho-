@@ -6,10 +6,37 @@ function testeLogin() {
             node.parentNode.removeChild(node);
         }
         let pai = document.getElementById("Novonome");
+        var a = document.createElement('a');
+        a.classList.add('test');
+        pai.appendChild(a);
         var div = document.createElement('div');
         div.classList.add('header-btn');
-        pai.appendChild(div);
         div.innerHTML = sessionStorage.nome;
+        a.appendChild(div);
+        var ul = document.createElement('ul');
+        ul.classList.add('dropdown');
+        pai.appendChild(ul);
+        var li1 = document.createElement('li');
+        ul.appendChild(li1);
+        var a1 = document.createElement('a');
+        li1.appendChild(a1);
+        a1.innerHTML = ("Meu Perfil");
+        var li2 = document.createElement('li');
+        ul.appendChild(li2);
+        var a2 = document.createElement('a');
+        li2.appendChild(a2);
+        a2.innerHTML = ("Meu Calendario");
+        var li3 = document.createElement('li');
+        ul.appendChild(li3);
+        var a3 = document.createElement('a');
+        li3.appendChild(a3);
+        a3.innerHTML = ("Configurações");
+        var li4 = document.createElement('li');
+        ul.appendChild(li4);
+        var a4 = document.createElement('a');
+        li4.appendChild(a4);
+        a4.innerHTML = ("Logout");
+
         
     }
 }
