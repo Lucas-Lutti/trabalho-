@@ -58,11 +58,15 @@ function redirecionar(){
 
 function exibircat(){
     var verifica = document.getElementById('mb').classList.contains('hide');
-    if(verifica == false){
-        document.getElementById('mb').classList.add("hide");
-    }
     if(verifica == true){
         document.getElementById('mb').classList.remove("hide");
     }
     
+}
+
+function fecharcat(){
+    var verifica = document.getElementById('mb').classList.contains('hide');
+    if(verifica == false){
+        document.getElementById('mb').classList.add("hide");
+    }
 }
