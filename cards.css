@@ -1,0 +1,75 @@
+
+.card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "imagem" "texto" "status";
+
+    font-family: roboto;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 3px 5px 10px black;
+    text-align: center;
+    
+
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 5vh auto;
+}
+.card-imagem{
+    grid-area: imagem;
+    background: url("./img/show.jpeg");
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-texto{
+    grid-area: texto;
+    margin: 25px;
+}
+.card-texto .date{
+    color: rgb(255, 7, 110);
+    font-size: 13px;
+}
+.card-texto .p{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-texto .h2{
+    margin-top: 0px;
+    
+    font-size: 28px;
+}
+.card-status{
+    grid-area: status;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(255, 7, 110);
+}
+.card-status .status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+.card-status .tipo{
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.card-status .valor{
+    font-size: 22px;
+    font-weight: 500;
+}
+.card:hover{
+    transform: scale(1.2);
+    box-shadow:  3px 5px 10px rgba(0,0,0,0.6) ;
+}

@@ -12,44 +12,78 @@
     <title>Greez</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
-    
-    
-    </head>
+    <link rel="stylesheet" href="cards.css">
+    <script>
+        window.onload = () => {
+            testeLogin();
+        }
+    </script>
+</head>
 
-<body>
+<body> 
+      <!-- Modal -->
+      <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Criar Novo Evento</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="inserirTituloEvnt">Título do Evento</label>
+                      <input type="text" class="form-control" id="inserirTituloEvnt" placeholder="Inserir título">
+                    </div>
+                    <div class="form-group">
+                      <label for="InserirLocalEvnt">Local</label>
+                      <input type="text" class="form-control" id="InserirLocalEvnt" placeholder="Inserir endereço">
+                    </div>
+                    <div class="form-group">
+                        <label for="InserirDiaEvnt">Data</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-2 col-md-2 col-sm-12">
                     <div class="header__logo">
-                        <a href="./index.html"><img class="logo"
-                                src="img/png-transparent-question-mark-emoji-sms-question-mark-angle-text-logo.png"
-                                alt=""></a>
+                        <a href="./index.html"><img class="logo" src="img/logo.png" alt=""></a>
                     </div>
 
                 </div>
-                <div class="col-lg-9 col-md-9">
+                <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active">
-                                    <a href="./index.html" class="test">
+                                    <a href="/index.html" class="test">
                                         <div class="header-btn"><i class="fas fa-home"></i> Ínicio</div>
                                     </a>
                                 </li>
-
-
-
-
-
-
-                                <li><a href="#" class="test">
-                                        <div class="header-btn">Listing</div>
-                                    </a></li>
                                 <li><a href="#" class="test">
                                         <div class="header-btn">Categorias</div>
+                                    </a></li>
+                                <li><a href="#" class="test">
+                                        <div class="header-btn">Principais</div>
                                     </a></li>
                                 <li><a href="#" class="test">
                                         <div class="header-btn">Páginas</div>
@@ -62,14 +96,21 @@
                                     </ul>
                                 </li>
 
-                                <li><a href="login.html" class="test">
-                                        <div class="header-btn">Login</div>
-                                    </a>
-                    </div>
-                    </li>
-                    </ul>
-                    </nav>
 
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <div class="login_area">
+                        <ul>
+                            <li id="Novonome">
+                                <a href="login.html" class="test" id="apagar">
+                                    <div class="header-btn" id="TrocaLogin">Entrar/Registrar</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,92 +118,384 @@
         </div>
     </header>
 
-    <section class="parte2">
+    <section class="pesquisa">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 titulo">
+                <h1>Descubra o melhor evento para você!</h1>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="btnCriarEvnt" data-toggle="modal" data-target="#modalExemplo">
+                    Criar Evento
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-sm-1"></div>
+            <div class="col-md-8 col-sm-10">
+                <div class="hero__search__form">
+                    <form action="#">
+                        <input id="inpPesquisa" type="text" placeholder="Pesquisar...">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-chama">Descubra o melhor evento para você</h1>
-                    <div class="hero__search__form">
-                        <form action="#">
-                            <input type="text" placeholder="Pesquisar...">
-
-                            <button type="submit">Explore Now</button>
-                        </form>
-                    </div>
-                    <h2 class="sessao">Categorias</h2>
+                        <button id="btnPesquisa" onclick="pesquisa()" type="submit">Explorar</button>
+                    </form>
                 </div>
+            </div>
+            <div class="col-md-2 col-sm-1"></div>
+        </div>
+    </section>
 
-                <div class="row category-child" style="margin-top:20px">
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/festas.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Festas</span>
-                                </div>
-                            </div>
-                        </a>
+    <section class="categorias">
+        <div class="row">
+            <div class="col-12 titulo">
+                <h1>Categorias</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 row cat_area">
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/festas.png" alt="">
+                            <h5>Festa</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/shows.png" alt="">
+                            <h5>Show</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/karaokes.png" alt="">
+                            <h5>Karaokê</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/jogos.png" alt="">
+                            <h5>Jogos</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/educacao.png" alt="">
+                            <h5>Educação</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/ciencia.png" alt="">
+                            <h5>Ciência</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/tecnologia.png" alt="">
+                            <h5>Tecnologia</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/saude.png" alt="">
+                            <h5>Saúde</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/esportes.png" alt="">
+                            <h5>Esportes</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="cat_sep">
+                    <a href="#/" onclick="exibircat()">
+                        <div class="cat_card">
+                            <img src="img/financeiro.png" alt="">
+                            <h5>Financeiro</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mb">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>(Categoria)</h1>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/shows.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Shows</span>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharcat()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="">
+                            
+                            
+
+                        </div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/show.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Esportivos</span>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destaques">
+        <div class="row">
+            <div class="col-12 titulo">
+                <h1>Destaques</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/karaokes.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Karaokês</span>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/show.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Família</span>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6 thumb ">
-                        <a class="thumbnail" href="#">
-                            <img src="img/show.png" alt="Balada">
-                            <div class="wrapper">
-                                <div class="caption post-content">
-                                    <span>Diversos</span>
-                                </div>
-                            </div>
-                        </a>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-imagem"></div>
+                <div class="card-texto">
+                    <span class="date">21/06/2020</span>
+                    <h2>(Titulo do evento)</h2>
+                    <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
+                </div>
+                <div class="card-status">
+                    <div class="status">
+                        <div class="valor">4</div>
+                        <div class="tipo">lidos</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">2342</div>
+                        <div class="tipo">visualizações</div>
+                    </div>
+                    <div class="status">
+                        <div class="valor">24</div>
+                        <div class="tipo">comentários</div>
                     </div>
                 </div>
             </div>
 
         </div>
+                
     </section>
 
-    <section class="parte3">
-         
-        </section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

@@ -1,11 +1,13 @@
 
-.header {
-	
+.header {	
 	left: 0;
 	top: 0;
 	width: 100%;
     z-index: 999;
-    background-color: #A4A4A4;
+	background-color: #050505;
+	padding: 10px;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0px;
 }
 
 .header.header--normal {
@@ -25,16 +27,17 @@
 }
 
 .header__logo {
-    padding: 30px 0;
-    
+    padding: 12px 0px 0px 0px;
 }
 .logo{
-    width: 4vw;
+	width: 100px;
+	margin: auto;
+	display: block;
 }
 
 .header__nav {
-	text-align: right;
-	padding: 30px 0;
+	text-align: center;
+	padding: 10px 0px 0px 0px;
 }
 
 .header__menu {
@@ -52,6 +55,7 @@
 	top: 32px;
 	opacity: 1;
 	visibility: visible;
+	z-index: 99;
 }
 
 .header__menu ul li:hover .dropdown li a {
@@ -61,6 +65,8 @@
 .header__menu ul li:hover .dropdown li a:after {
 	display: none;
 }
+
+
 
 .header__menu ul li:hover>a:after {
 	opacity: 1;
@@ -85,6 +91,7 @@
 	opacity: 0;
 	visibility: hidden;
 	padding: 5px 0;
+	border-radius: 5px;
 }
 
 .header__menu ul li .dropdown li {
@@ -145,23 +152,18 @@
 	display: none;
 }
 
-.header-li{
-	background-color: tomato;
-	text-decoration: none;
-}
-
 .header-btn{
 	display: block;
-	background-color: rgb(46, 46, 46);
+	/*background-color: #0E5058;*/
 	border-radius: 5px;
 	padding: 3px 10px;
-	color: white;
+	color: rgb(109, 109, 109);
 	text-decoration: none;
 }
 
 .active .header-btn{
 	display: block;
-	background-color: rgb(8, 8, 8);
+	/*background-color: #1B9AAA;*/
 	border-radius: 5px;
 	padding: 3px 10px;
 	color: white;
@@ -169,11 +171,104 @@
 }
 
 .header-btn:hover{
-	background-color: rgb(26, 26, 26);
-	color: rgb(224, 224, 224);
+	/*background-color: #167F8D;*/
+	color: rgb(192, 192, 192);
+	text-decoration: none;
+}
+
+.active .header-btn:hover{
+	/*background-color: #167F8D;*/
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
 
 .test:hover{
 	text-decoration: none;
+}
+
+.login_area{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	justify-content: right;
+}
+
+.login_area ul li{
+	display: block;
+	list-style: none;
+	margin: auto;
+}
+
+.login_area ul li:hover .dropdown {
+	top: 32px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 99;
+}
+
+.login_area ul li:hover .dropdown li a {
+	color: #ffffff;
+}
+
+.login_area ul li:hover .dropdown li a:after {
+	display: none;
+}
+
+.login_area ul li .dropdown {
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 180px;
+	background: #222222;
+	text-align: left;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	padding: 5px 0;
+	border-radius: 5px;
+}
+
+.login_area ul li .dropdown li {
+	margin-right: 0;
+	display: block;
+}
+
+.login_area ul li .dropdown li a {
+	color: white;
+	padding: 6px 15px;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.login_area ul li .dropdown li a:hover {
+	color: rgb(206, 206, 206);
+	text-decoration: none;
+}
+
+.login_area ul li a:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 0%;
+	background: #ffffff00;
+	content: "";
+	opacity: 0;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.login_area{
+	display: inline-block;
+}
+
+.login_area ul li a {
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 5px 0;
+	display: block;
+	position: relative;
 }
