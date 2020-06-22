@@ -56,3 +56,20 @@ function redirecionar(){
     window.location.replace("index.html");
 }
 
+<<<<<<< HEAD
+=======
+function exibircat(){
+    var verifica = document.getElementById('mb').classList.contains('hide');
+    if(verifica == true){
+        document.getElementById('mb').classList.remove("hide");
+    }
+    
+}
+
+function fecharcat(){
+    var verifica = document.getElementById('mb').classList.contains('hide');
+    if(verifica == false){
+        document.getElementById('mb').classList.add("hide");
+    }
+}
+>>>>>>> 7c8f13eb6757d2afbb177b517200db24e0677339

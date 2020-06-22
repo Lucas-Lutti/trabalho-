@@ -12,7 +12,7 @@
     <title>Greez</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     <script>
@@ -22,7 +22,44 @@
     </script>
 </head>
 
-<body>
+<body> 
+      <!-- Modal -->
+      <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Criar Novo Evento</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="inserirTituloEvnt">Título do Evento</label>
+                      <input type="text" class="form-control" id="inserirTituloEvnt" placeholder="Inserir título">
+                    </div>
+                    <div class="form-group">
+                      <label for="InserirLocalEvnt">Local</label>
+                      <input type="text" class="form-control" id="InserirLocalEvnt" placeholder="Inserir endereço">
+                    </div>
+                    <div class="form-group">
+                        <label for="InserirDiaEvnt">Data</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <header class="header">
         <div class="container-fluid">
             <div class="row">
@@ -82,8 +119,14 @@
 
     <section class="pesquisa">
         <div class="row">
-            <div class="col-12 titulo">
+            <div class="col-2"></div>
+            <div class="col-8 titulo">
                 <h1>Descubra o melhor evento para você!</h1>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="btnCriarEvnt" data-toggle="modal" data-target="#modalExemplo">
+                    Criar Evento
+                </button>
             </div>
         </div>
         <div class="row">
@@ -111,7 +154,7 @@
             <div class="col-2"></div>
             <div class="col-8 row cat_area">
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/festas.png" alt="">
                             <h5>Festa</h5>
@@ -119,7 +162,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/shows.png" alt="">
                             <h5>Show</h5>
@@ -127,7 +170,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/karaokes.png" alt="">
                             <h5>Karaokê</h5>
@@ -135,7 +178,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/jogos.png" alt="">
                             <h5>Jogos</h5>
@@ -143,7 +186,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/educacao.png" alt="">
                             <h5>Educação</h5>
@@ -151,7 +194,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/ciencia.png" alt="">
                             <h5>Ciência</h5>
@@ -159,7 +202,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/tecnologia.png" alt="">
                             <h5>Tecnologia</h5>
@@ -167,7 +210,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/saude.png" alt="">
                             <h5>Saúde</h5>
@@ -175,7 +218,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/esportes.png" alt="">
                             <h5>Esportes</h5>
@@ -183,7 +226,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#" onclick="exibircat()">
+                    <a href="#/" onclick="exibircat()">
                         <div class="cat_card">
                             <img src="img/financeiro.png" alt="">
                             <h5>Financeiro</h5>
@@ -196,9 +239,11 @@
         <div class="row">
             <div class="col-12 cat_select hide" id="mb">
                 <div class="row">
-                    <div class="col-12 titulo">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
                         <h1>(Categoria)</h1>
                     </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharcat()"><div class="arrow"></div></a></div>
                 </div>
                 <div class="row">
                     <div class="col-1"></div>
