@@ -66,6 +66,8 @@
 	display: none;
 }
 
+
+
 .header__menu ul li:hover>a:after {
 	opacity: 1;
 	width: 100%;
