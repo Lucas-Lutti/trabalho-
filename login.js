@@ -7,7 +7,7 @@ function login() {
         sessionStorage.setItem('senha', loginpassword.value);
         redirecionar();
     }
-    else {
+        else {
         console.log("Preencha os espaços vazios");
         alert("Preencha os espaços vazios");
     }

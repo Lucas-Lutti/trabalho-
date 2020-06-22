@@ -1,6 +1,9 @@
 /* ------------------------------------ Click on login and Sign Up to  changue and view the effect
 ---------------------------------------
 */
+body{
+	overflow-x: hidden;
+} 
 
 * {
     margin: 0px auto;

@@ -1,4 +1,6 @@
-
+body{
+	overflow-x: hidden;
+}
 .parte2{
     background-color: #A4A4A4;
     height: 70vh;
@@ -7,9 +9,7 @@
     text-align: center;
     color: white;
 }
-form{
-    padding-left: 30%;
-}
+
 .hero__search__form {
 	margin-bottom: 30px;
 	padding: 20px;
@@ -18,33 +18,33 @@ form{
 }
 
 .hero__search__form form input {
-	width: 40%;
+	width: 80%;
 	float: left;
 	font-size: 15px;
-	color: #A8A8A8;
+	color: #616161;
 	padding-left: 30px;
 	height: 54px;
 	border: none;
 }
 
 .hero__search__form form input::-webkit-input-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input::-moz-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input:-ms-input-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input::-ms-input-placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form input::placeholder {
-	color: #A8A8A8;
+	color: #616161;
 }
 
 .hero__search__form form .select__option {
@@ -96,7 +96,7 @@ form{
 }
 
 .hero__search__form form button {
-	width: 15%;
+	width: 20%;
 	height: 54px;
 	border: none;
 	font-size: 14px;
@@ -292,4 +292,75 @@ h2.sessao{
 .cat_card h5{
 	margin-top: 10px;
 	text-align: center;
+}
+
+.cat_select{
+	display: block;
+	overflow: hidden;
+	opacity: 1;
+	max-height: 1000px;
+  	transition: opacity 0.5s linear, max-height 0.5s 0s;
+}
+
+.cat_select.hide{
+	opacity: 0;
+	max-height: 0px;
+}
+
+.cat_select{
+	background-color: #2c2c2c;
+}
+
+.evnt_sep{
+	margin: 10px;
+}
+
+.evnt_sep a{
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+.evnt_sep a:hover{
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+.evnt_card{
+	display: block;
+	margin: 20px;
+	background-color: #dadada;
+	width: 300px;
+	height: 500px;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.5s 0s;
+}
+
+.evnt_card:hover{
+	background-color: #bebebe;
+}
+
+.evnt_card img{
+	display: block;
+	width: 240px;
+	height: 150px;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+
+.evnt_titulo{
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+.evnt_card h6{
+	font-weight: bold;
+	float: left;
+	margin: 0px;
+	margin-right: 5px;
+}
+
+.destaques{
+	background-color: rgb(10, 10, 10);
+	min-height: 500px;
 }
