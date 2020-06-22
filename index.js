@@ -56,8 +56,6 @@ function redirecionar(){
     window.location.replace("index.html");
 }
 
-<<<<<<< HEAD
-=======
 function exibircat(){
     var verifica = document.getElementById('mb').classList.contains('hide');
     if(verifica == true){
@@ -72,4 +70,3 @@ function fecharcat(){
         document.getElementById('mb').classList.add("hide");
     }
 }
->>>>>>> 7c8f13eb6757d2afbb177b517200db24e0677339
