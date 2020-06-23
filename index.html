@@ -38,14 +38,18 @@
                 <form>
                     <div class="form-group">
                       <label for="inserirTituloEvnt">Título do Evento</label>
-                      <input type="text" class="form-control" id="inserirTituloEvnt" placeholder="Inserir título">
+                      <input type="text" class="form-control" id="inserirTituloEvento" placeholder="Inserir título">
                     </div>
                     <div class="form-group">
                       <label for="InserirLocalEvnt">Local</label>
                       <input type="text" class="form-control" id="InserirLocalEvnt" placeholder="Inserir endereço">
                     </div>
                     <div class="form-group">
-                        <label for="InserirDiaEvnt">Data</label>
+                        <label for="inserirConteudoEvnt">Conteudo</label>
+                        <input type="text" class="form-control" id="inserirConteudoEvnt" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="InserirDiaEvnt">Data: </label><input id="dia" class="data" type="number"> / <input id="mes" class="data" type="number"> / <input id="ano" class="data" type="number">
                     </div>
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -56,7 +60,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Salvar mudanças</button>
+              <button type="button" onclick="criarCard()" class="btn btn-primary">Salvar mudanças</button>
             </div>
           </div>
         </div>
@@ -261,18 +265,18 @@
         </div>
     </section>
 
-    <section class="destaques">
+    <section class="destaques" id="principal">
         <div class="row">
             <div class="col-12 titulo">
                 <h1>Destaques</h1>
             </div>
         </div>
         <div class="row">
-            <div class="card ">
+            <div class="card " id="Card">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>So track boa</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -290,11 +294,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div  id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Carna do Bem</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -312,11 +316,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Flowers</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -334,11 +338,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Rock n Rio</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -356,11 +360,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Comic-con</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -381,11 +385,11 @@
         </div>
         <div class="row">
 
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Brasil Game Show</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -403,11 +407,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>E3</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -425,11 +429,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Niver do Prefeito</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -447,11 +451,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>Ted Talk</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">
@@ -469,11 +473,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card ">
+            <div id="Card" class="card ">
                 <div class="card-imagem"></div>
                 <div class="card-texto">
                     <span class="date">21/06/2020</span>
-                    <h2>(Titulo do evento)</h2>
+                    <h2>1ª rodada do brasileirão</h2>
                     <p class="conteudo">Festa junina, com muitos doces, danças, comidas típicas e diversão!</p>
                 </div>
                 <div class="card-status">

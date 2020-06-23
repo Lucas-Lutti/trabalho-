@@ -1,7 +1,7 @@
 function login() {
     var username = document.getElementById("loginusername").value;
     var password = document.getElementById("loginpassword").value;
-    if (password == ' ' | username == ' ') {
+    if (password != ' ' | username != ' ') {
         console.log("Nome: " + username + "  Senha: " + password);
         sessionStorage.setItem('nome', loginusername.value);
         sessionStorage.setItem('senha', loginpassword.value);
@@ -18,7 +18,7 @@ function signup() {
     var password = document.getElementById("signuppassword").value;
     var comfirm = document.getElementById("signupcomfirm").value;
 
-    if ((password == ' ' | confirm == ' ') | username == ' ') {
+    if ((password != ' ' | confirm != ' ') | username != ' ') {
         if (password == comfirm) {
             console.log("Nome: " + username + "Senha: " + password);
             sessionStorage.setItem('nome', signupusername.value);

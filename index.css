@@ -424,3 +424,8 @@ div.arrow:hover::before {
 	margin: 20px;
 	float: right;
 }
+
+.data{
+	width: 50px;
+	border-radius: 5px;
+}
