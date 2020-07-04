@@ -157,7 +157,7 @@ function primeiraVez(){
     divtipo2.innerHTML = "Comentarios";
     divstatus2.appendChild(divtipo2);
     $('.card-status'+click).ready(function() {
-        var back = ["#ff0000","blue","gray"];
+        var back = ["#Black","grey11","grey21","grey31","DimGray","Gray","DarkGray","Silver","LightGrey","Gainsboro","SlateBlue","SlateBlue1","SlateBlue3","DarkSlateBlue","MidnightBlue","Navy","DarkBlue","MediumBlue","Blue","CornflowerBlue","RoyalBlue","DodgerBlue","DeepSkyBlue","LightSkyBlue","SkyBlue","LightBlue","SteelBlue","LightSteelBlue","SlateGray","LightSlateGray","Aqua","DarkTurquoise","Turquoise","MediumTurquoise","LightSeaGreen","DarkCyan","Teal","Aquamarine","MediumAquamarine","CadetBlue","DarkSlateGray","MediumSpringGreen","SpringGreen","PaleGreen","LightGreen","DarkSeaGreen","MediumSeaGreen"];
         var rand = back[Math.floor(Math.random() * back.length)];
         $('.card-status'+click).css('background',rand);
     })
@@ -258,7 +258,7 @@ function segundaVez(){
     divtipo2.innerHTML = "Comentarios";
     divstatus2.appendChild(divtipo2);
     $('.card-status'+click).ready(function() {
-        var back = ["#ff0000","blue","gray"];
+        var back = ["#Black","grey11","grey21","grey31","DimGray","Gray","DarkGray","Silver","LightGrey","Gainsboro","SlateBlue","SlateBlue1","SlateBlue3","DarkSlateBlue","MidnightBlue","Navy","DarkBlue","MediumBlue","Blue","CornflowerBlue","RoyalBlue","DodgerBlue","DeepSkyBlue","LightSkyBlue","SkyBlue","LightBlue","SteelBlue","LightSteelBlue","SlateGray","LightSlateGray","Aqua","DarkTurquoise","Turquoise","MediumTurquoise","LightSeaGreen","DarkCyan","Teal","Aquamarine","MediumAquamarine","CadetBlue","DarkSlateGray","MediumSpringGreen","SpringGreen","PaleGreen","LightGreen","DarkSeaGreen","MediumSeaGreen"];
         var rand = back[Math.floor(Math.random() * back.length)];
         $('.card-status'+click).css('background',rand);
     })
