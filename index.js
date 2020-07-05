@@ -1415,6 +1415,7 @@ function cardFestas1() {
     let div = document.getElementById("Festas");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -1520,6 +1521,7 @@ function cardShow1() {
     let div = document.getElementById("Show");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -1625,6 +1627,7 @@ function cardKaraoke1() {
     let div = document.getElementById("Karaoke");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -1730,6 +1733,7 @@ function cardJogos1() {
     let div = document.getElementById("Jogos");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -1835,6 +1839,7 @@ function cardEducacao1() {
     let div = document.getElementById("Educacao");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -1940,6 +1945,7 @@ function cardCiencia1() {
     let div = document.getElementById("Ciencia");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -2046,6 +2052,7 @@ function cardTecnologia1() {
     let div = document.getElementById("Tecnologia");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -2152,6 +2159,7 @@ function cardSaude1() {
     let div = document.getElementById("Saude");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -2258,6 +2266,7 @@ function cardEsporte1() {
     let div = document.getElementById("Esportes");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
@@ -2364,6 +2373,7 @@ function cardFinanceiro1() {
     let div = document.getElementById("Financeiro");
     var divtop = document.createElement('div');
     divtop.classList.add('row');
+    divtop.classList.add('cardCategoria');
     divtop.setAttribute("id", "divtop");
     div.appendChild(divtop);
     var div1 = document.createElement('div');
