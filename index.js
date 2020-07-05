@@ -314,43 +314,43 @@ function salvarMudanças() {
             $('.status' + click).css('color', "white");
         })
         if (Festa.checked == true) {
-            cardFestas();
+            cardFestas1();
         }
         let Show = document.getElementById("box-2");
         if (Show.checked == true) {
-            cardShow();
+            cardShow1();
         }
         let Karaoke = document.getElementById("box-3");
         if (Karaoke.checked == true) {
-            cardKaraoke();
+            cardKaraoke1();
         }
         let Jogos = document.getElementById("box-4");
         if (Jogos.checked == true) {
-            cardJogos();
+            cardJogos1();
         }
         let Educacao = document.getElementById("box-5");
         if (Educacao.checked == true) {
-            cardEducacao();
+            cardEducacao1();
         }
         let Ciencia = document.getElementById("box-6");
         if (Ciencia.checked == true) {
-            cardCiencia();
+            cardCiencia1();
         }
         let Tecnologia = document.getElementById("box-7");
         if (Tecnologia.checked == true) {
-            cardTecnologia();
+            cardTecnologia1();
         }
         let Saude = document.getElementById("box-8");
         if (Saude.checked == true) {
-            cardSaude();
+            cardSaude1();
         }
         let Esportes = document.getElementById("box-9");
         if (Esportes.checked == true) {
-            cardEsporte();
+            cardEsporte1();
         }
         let Financeiro = document.getElementById("box-10");
         if (Financeiro.checked == true) {
-            cardFinanceiro();
+            cardFinanceiro1();
         }
     }
 }
@@ -879,7 +879,6 @@ function cardEducacao() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
 }
 
 function cardCiencia() {
@@ -1411,6 +1410,1061 @@ function cardFinanceiro() {
     })
 
 }
+
+function cardFestas1() {
+    let div = document.getElementById("Festas");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+}
+
+function cardShow1() {
+    let div = document.getElementById("Show");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+} 
+
+function cardKaraoke1() {
+    let div = document.getElementById("Karaoke");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+}
+
+function cardJogos1() {
+    let div = document.getElementById("Jogos");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+}
+
+function cardEducacao1() {
+    let div = document.getElementById("Educacao");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+}
+
+function cardCiencia1() {
+    let div = document.getElementById("Ciencia");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+
+}
+
+function cardTecnologia1() {
+    let div = document.getElementById("Tecnologia");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+
+}
+
+function cardSaude1() {
+    let div = document.getElementById("Saude");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+
+}
+
+function cardEsporte1() {
+    let div = document.getElementById("Esportes");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+
+}
+
+function cardFinanceiro1() {
+    let div = document.getElementById("Financeiro");
+    var divtop = document.createElement('div');
+    divtop.classList.add('row');
+    divtop.setAttribute("id", "divtop");
+    div.appendChild(divtop);
+    var div1 = document.createElement('div');
+    div1.classList.add('card');
+    div1.id = "Card";
+    divtop.appendChild(div1);
+    var divimagem = document.createElement('div');
+    divimagem.classList.add('card-imagem');
+    div1.appendChild(divimagem);
+    var div2 = document.createElement('div');
+    div2.classList.add('card-texto');
+    div1.appendChild(div2);
+    var spandata = document.createElement('span');
+    spandata.classList.add('date');
+    spandata.innerHTML = (+sessionStorage.dia + '/' + sessionStorage.mes + '/' + sessionStorage.ano);
+    div2.appendChild(spandata);
+    var titulo = document.createElement('h2');
+    titulo.innerHTML = sessionStorage.nome;
+    div2.appendChild(titulo);
+    var p = document.createElement('p');
+    p.innerHTML = sessionStorage.conteudo;
+    div2.appendChild(p)
+    var div3 = document.createElement('div');
+    div3.classList.add('card-status' + click);
+    div1.appendChild(div3);
+    var divstatus = document.createElement('div');
+    divstatus.classList.add('status' + click);
+    div3.appendChild(divstatus);
+    var divvalor = document.createElement('div');
+    divvalor.classList.add('valor');
+    divvalor.innerHTML = "4";
+    divstatus.appendChild(divvalor);
+    var divtipo = document.createElement('div');
+    divtipo.classList.add('tipo');
+    divtipo.innerHTML = "lidos";
+    divstatus.appendChild(divtipo);
+    var divstatus1 = document.createElement('div');
+    divstatus1.classList.add('status' + click);
+    div3.appendChild(divstatus1);
+    var divvalor1 = document.createElement('div');
+    divvalor1.classList.add('valor');
+    divvalor1.innerHTML = "3464";
+    divstatus1.appendChild(divvalor1);
+    var divtipo1 = document.createElement('div');
+    divtipo1.classList.add('tipo');
+    divtipo1.innerHTML = "Visualizações";
+    divstatus1.appendChild(divtipo1);
+    var divstatus2 = document.createElement('div');
+    divstatus2.classList.add('status' + click);
+    div3.appendChild(divstatus2);
+    var divvalor2 = document.createElement('div');
+    divvalor2.classList.add('valor');
+    divvalor2.innerHTML = "456";
+    divstatus2.appendChild(divvalor2);
+    var divtipo2 = document.createElement('div');
+    divtipo2.classList.add('tipo');
+    divtipo2.innerHTML = "Comentarios";
+    divstatus2.appendChild(divtipo2);
+    $('.card-status' + click).ready(function () {
+        var back = ["#Black", "grey11", "grey21", "grey31", "DimGray", "Gray", "DarkGray", "Silver", "LightGrey", "Gainsboro", "SlateBlue", "SlateBlue1", "SlateBlue3", "DarkSlateBlue", "MidnightBlue", "Navy", "DarkBlue", "MediumBlue", "Blue", "CornflowerBlue", "RoyalBlue", "DodgerBlue", "DeepSkyBlue", "LightSkyBlue", "SkyBlue", "LightBlue", "SteelBlue", "LightSteelBlue", "SlateGray", "LightSlateGray", "Aqua", "DarkTurquoise", "Turquoise", "MediumTurquoise", "LightSeaGreen", "DarkCyan", "Teal", "Aquamarine", "MediumAquamarine", "CadetBlue", "DarkSlateGray", "MediumSpringGreen", "SpringGreen", "PaleGreen", "LightGreen", "DarkSeaGreen", "MediumSeaGreen"];
+        var rand = back[Math.floor(Math.random() * back.length)];
+        $('.card-status' + click).css('background', rand);
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-area', "status");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('display', "grid");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-columns', "1fr 1fr 1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('grid-template-rows', "1fr");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-left-radius', "15px");
+    })
+    $('.card-status' + click).ready(function () {
+        $('.card-status' + click).css('border-bottom-right-radius', "15px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('display', "flex");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('align-items', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('justify-content', "center");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('flex-direction', "column");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('padding', "10px");
+    })
+    $('.status' + click).ready(function () {
+        $('.status' + click).css('color', "white");
+    })
+}
+
 
 function exibirFestas() {
     var verifica = document.getElementById('mbFestas').classList.contains('hide');
