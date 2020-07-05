@@ -25,7 +25,7 @@
 </head>
 
 <body> 
-      <!-- Modal -->
+    <!-- Modal -->
       <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -91,7 +91,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" onclick="criarCard()" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
+              <button type="button" onclick="salvarMudanças()" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
             </div>
           </div>
         </div>
@@ -130,8 +130,6 @@
                                         <li><a href="#">Contact</a></li>
                                     </ul>
                                 </li>
-
-
                             </ul>
                         </nav>
                     </div>
@@ -190,7 +188,7 @@
             <div class="col-2"></div>
             <div class="col-8 row cat_area">
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirFestas()">
                         <div class="cat_card">
                             <img src="img/festas.png" alt="">
                             <h5>Festa</h5>
@@ -198,7 +196,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirShows()">
                         <div class="cat_card">
                             <img src="img/shows.png" alt="">
                             <h5>Show</h5>
@@ -206,7 +204,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirKaraoke()">
                         <div class="cat_card">
                             <img src="img/karaokes.png" alt="">
                             <h5>Karaokê</h5>
@@ -214,7 +212,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirJogos()">
                         <div class="cat_card">
                             <img src="img/jogos.png" alt="">
                             <h5>Jogos</h5>
@@ -222,7 +220,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirEducacao()">
                         <div class="cat_card">
                             <img src="img/educacao.png" alt="">
                             <h5>Educação</h5>
@@ -230,7 +228,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirCiencia()">
                         <div class="cat_card">
                             <img src="img/ciencia.png" alt="">
                             <h5>Ciência</h5>
@@ -238,7 +236,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirTecnologia()">
                         <div class="cat_card">
                             <img src="img/tecnologia.png" alt="">
                             <h5>Tecnologia</h5>
@@ -246,7 +244,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirSaude()">
                         <div class="cat_card">
                             <img src="img/saude.png" alt="">
                             <h5>Saúde</h5>
@@ -254,7 +252,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirEsportes()">
                         <div class="cat_card">
                             <img src="img/esportes.png" alt="">
                             <h5>Esportes</h5>
@@ -262,7 +260,7 @@
                     </a>
                 </div>
                 <div class="cat_sep">
-                    <a href="#/" onclick="exibircat()">
+                    <a href="#/" onclick="exibirFinanceiro()">
                         <div class="cat_card">
                             <img src="img/financeiro.png" alt="">
                             <h5>Financeiro</h5>
@@ -273,20 +271,198 @@
             <div class="col-2"></div>
         </div>
         <div class="row">
-            <div class="col-12 cat_select hide" id="mb">
+            <div class="col-12 cat_select hide" id="mbFestas">
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-8 titulo">
-                        <h1>(Categoria)</h1>
+                        <h1>Festas</h1>
                     </div>
-                    <div class="col-2 arrow1"><a href="#/" onclick="fecharcat()"><div class="arrow"></div></a></div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharFestas()"><div class="arrow"></div></a></div>
                 </div>
                 <div class="row">
                     <div class="col-1"></div>
                     <div class="col-10">
-                        <div class="">
-                            
-                            
+                        <div class="row" id="Festas">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbShows">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>shows</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharShows()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Show">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbKaraoke">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>Karaokê</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharKaraoke()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Karaoke">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbJogos">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>Jogos</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharJogos()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Jogos">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbEducacao">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>Educação</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharEducacao()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Educacao">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbCiencia">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>ciencia</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharCiencia()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Ciencia">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbTecnologia">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>Tecnologia</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharTecnologia()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Tecnologia">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbSaude">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>saude</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharSaude()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Saude">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbEsportes">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>Esportes</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharEsportes()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Esportes">
+
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cat_select hide" id="mbFinanceiro">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 titulo">
+                        <h1>Financeiro</h1>
+                    </div>
+                    <div class="col-2 arrow1"><a href="#/" onclick="fecharFinanceiro()"><div class="arrow"></div></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row" id="Financeiro">
 
                         </div>
                     </div>
