@@ -173,6 +173,7 @@ function salvarMudanças() {
         $('.status' + click).ready(function () {
             $('.status' + click).css('color', "white");
         })
+        let Festa = document.getElementById('box-1');
         if (Festa.checked == true) {
             cardFestas();
         }
@@ -313,6 +314,7 @@ function salvarMudanças() {
         $('.status' + click).ready(function () {
             $('.status' + click).css('color', "white");
         })
+        let Festa = document.getElementById('box-1');
         if (Festa.checked == true) {
             cardFestas1();
         }
@@ -458,6 +460,9 @@ function cardFestas() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardShow() {
@@ -562,6 +567,9 @@ function cardShow() {
     })
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
+    })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
     })
 } 
 
@@ -668,6 +676,9 @@ function cardKaraoke() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardJogos() {
@@ -773,7 +784,9 @@ function cardJogos() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardEducacao() {
@@ -878,6 +891,9 @@ function cardEducacao() {
     })
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
+    })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
     })
 }
 
@@ -984,7 +1000,9 @@ function cardCiencia() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardTecnologia() {
@@ -1090,7 +1108,9 @@ function cardTecnologia() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardSaude() {
@@ -1196,7 +1216,9 @@ function cardSaude() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardEsporte() {
@@ -1302,7 +1324,9 @@ function cardEsporte() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardFinanceiro() {
@@ -1408,7 +1432,9 @@ function cardFinanceiro() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardFestas1() {
@@ -1514,6 +1540,9 @@ function cardFestas1() {
     })
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
+    })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
     })
 }
 
@@ -1621,6 +1650,9 @@ function cardShow1() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 } 
 
 function cardKaraoke1() {
@@ -1726,6 +1758,9 @@ function cardKaraoke1() {
     })
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
+    })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
     })
 }
 
@@ -1833,6 +1868,9 @@ function cardJogos1() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardEducacao1() {
@@ -1938,6 +1976,9 @@ function cardEducacao1() {
     })
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
+    })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
     })
 }
 
@@ -2045,7 +2086,9 @@ function cardCiencia1() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardTecnologia1() {
@@ -2152,7 +2195,9 @@ function cardTecnologia1() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardSaude1() {
@@ -2259,7 +2304,9 @@ function cardSaude1() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardEsporte1() {
@@ -2366,7 +2413,9 @@ function cardEsporte1() {
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
     })
-
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
+    })
 }
 
 function cardFinanceiro1() {
@@ -2472,6 +2521,9 @@ function cardFinanceiro1() {
     })
     $('.status' + click).ready(function () {
         $('.status' + click).css('color', "white");
+    })
+    $('.cardCategoria').ready(function () {
+        $('.cardCategoria').css('margin-left', "50px");
     })
 }
 
