@@ -73,7 +73,7 @@ function salvarMudanças() {
         let div = document.getElementById("principal");
         var divtop = document.createElement('div');
         divtop.classList.add('row');
-        divtop.setAttribute("id", "divtop");
+        divtop.setAttribute("id", "divtop5");
         div.appendChild(divtop);
         var div1 = document.createElement('div');
         div1.classList.add('card');
@@ -215,7 +215,7 @@ function salvarMudanças() {
     }
     else
     {
-        let div = document.getElementById("divtop");
+        let div = document.getElementById("divtop5");
         var div1 = document.createElement('div');
         div1.classList.add('card');
         div1.id = "Card";
