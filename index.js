@@ -314,7 +314,7 @@ function salvarMudanças() {
         $('.status' + click).ready(function () {
             $('.status' + click).css('color', "white");
         })
-        let Festa = document.getElementById('box-1');
+        let Festa = document.getElementById("box-1");
         if (Festa.checked == true) {
             cardFestas1();
         }
