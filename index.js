@@ -68,7 +68,6 @@ function salvarMudanças() {
     sessionStorage.setItem('dia', dia.value);
     sessionStorage.setItem('mes', mes.value);
     sessionStorage.setItem('ano', ano.value);
-    let Festa = document.getElementById("box-1");
 
     if (click % 5 == 0) {
         let div = document.getElementById("principal");
